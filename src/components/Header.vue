@@ -3,16 +3,13 @@
     <div class="container">
       <img src="../assets/img/dc-logo.png" alt="dc-logo">
       <ul>
-        <li><a href="">characters</a></li>
-        <li><a href="">comics</a></li>
-        <li><a href="">movies</a></li>
-        <li><a href="">tv</a></li>
-        <li><a href="">games</a></li>
-        <li><a href="">collectibles</a></li>
-        <li><a href="">videos</a></li>
-        <li><a href="">fans</a></li>
-        <li><a href="">news</a></li>
-        <li><a href="">shop</a></li>
+        <li
+        v-for="(link, index) in links" 
+        :key="`nav-top${index}`"
+        :class="{active : (index === counter)}">
+        <a
+        class="nav-list-border"
+        href="#">{{link.text}}</a></li>
       </ul>
     </div>
   </header>
@@ -20,7 +17,55 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+
+  data(){
+    return{
+      links: [
+        {
+          text: "characters",
+          active: false
+        },
+        {
+          text: "comics",
+          active: false 
+        },
+        {
+          text: "movies",
+          active: false
+        },
+        {
+          text: "tv",
+          active: false
+        },
+        {
+          text: "games",
+          active: false
+        },
+        {
+          text: "collectibles",
+          active: false
+        },
+        {
+          text: "videos",
+          active: false
+        },
+        {
+          text: "fans",
+          active: false
+        },
+        {
+          text: "news",
+          active: false
+        },
+        {
+          text: "shop",
+          active: false
+        },
+      ],
+      counter: 1,
+    }
+  }
 }
 </script>
 
@@ -33,21 +78,35 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-          img {
-            width: 80px;
-          }
-            li {
-              list-style: none;
-              display: inline-block;
-              cursor: pointer;
+          li {
+            list-style: none;
+            display: inline-block;
+            cursor: pointer;
+            &:hover a {
+              color: $primary-color;
             }
-              a {
-                text-decoration: none;
-                color: black;
-                padding: 15px;
-                text-transform: uppercase;
-                line-height: 96px;
-              }
+            &:hover,
+            &.active {
+              border-bottom: 4px solid $primary-color;
+            }
+            &.active a {
+              color: $primary-color;
+            }
+            a {
+              text-decoration: none;
+              color: black;
+              padding: 15px;
+              text-transform: uppercase;
+              line-height: 96px;
+            }
+          }
+          img {
+            width: 70px;
+            cursor: pointer;
+          }
+          .nav-list-border {
+            line-height: 96px;
+          }
       }
   }
 

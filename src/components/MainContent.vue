@@ -44,18 +44,19 @@ export default {
       padding: 20px;
       display: flex;
       justify-content: space-between;
-        .image-box {
-          display: flex;
-          align-items: center;
-            img {
-              width: 40px;
-              margin-right: 10px;
-            }
-              h4 {
-                font-size: 15px;
-                text-transform: uppercase;
-              }         
+      .image-box {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 40px;
+          margin-right: 10px;
         }
+        h4 {
+          font-size: 15px;
+          text-transform: uppercase;
+        }         
+      }
     }
   }
 

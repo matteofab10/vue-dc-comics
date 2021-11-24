@@ -80,34 +80,34 @@ export default {
     background-image: url("../assets/img/footer-bg.jpg");
 
       .footer-top {
-        height: 400px;
-        color: white;
-        display: flex;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-          .list {
-            display: flex;
-              .column-list {
-                margin-right: 30px;
-                  .footer-list {
-                    list-style: none;
-                    display: flex;
-                    flex-direction: column;
-                      li {
-                        padding: 2px 0;
-                          a {
-                            color: rgb(189, 189, 189);
-                            text-decoration: none;
-                            &:hover {
-                              color: white;
-                              border-bottom: none;
-                            }
-                          }
-                      }
+        height: 400px;
+        color: white;
+        display: flex;
+        .list {
+          display: flex;
+          .column-list {
+            margin-right: 30px;
+            .footer-list {
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              li {
+                padding: 2px 0;
+                a {
+                  color: rgb(189, 189, 189);
+                  text-decoration: none;
+                  &:hover {
+                    color: white;
+                    border-bottom: none;
                   }
+                }
               }
+            }
           }
+        }
         h3 {
           font-size: 25px;
           margin: 10px 0;
@@ -124,31 +124,32 @@ export default {
     background-color: #303030;
     display: flex;
     align-items: center;
-      .container {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background-color: #303030;
+        border: 2px solid $primary-color;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+      }
+      .footer-social {
         display: flex;
         justify-content: space-between;
         align-items: center;
-          button {
-            background-color: #303030;
-            border: 2px solid $primary-color;
-            color: white;
-            padding: 15px;
-            cursor: pointer;
-          }
-          .footer-social {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-              h3 {
-                color: $primary-color;
-                font-size: 25px;
-                margin-right: 10px;
-              }
-                img {
-                  width: 35px;
-                  margin: 0 12px;
-                }
-          }
+        h3 {
+          color: $primary-color;
+          font-size: 25px;
+          margin-right: 10px;
+        }
+        img {
+          width: 35px;
+          margin: 0 12px;
+          cursor: pointer;
+        }
       }
+    }
   }
 </style>
