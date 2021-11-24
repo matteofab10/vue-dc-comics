@@ -1,23 +1,23 @@
 <template>
   <section>
     <div class="container">
-      <div class="box">
+      <div class="image-box">
         <img class="little-img" src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
         <h4>digital comics</h4>
       </div>
-      <div class="box">
+      <div class="image-box">
         <img src="../assets/img/buy-comics-merchandise.png" alt="">
         <h4>dc merchandise</h4>
       </div>
-      <div class="box">
+      <div class="image-box">
         <img src="../assets/img/buy-comics-subscriptions.png" alt="">
         <h4>subscriptions</h4>
       </div>
-      <div class="box">
+      <div class="image-box">
         <img src="../assets/img/buy-comics-shop-locator.png" alt="">
         <h4>comic shop locator</h4>
       </div>
-      <div class="box">
+      <div class="image-box">
         <img src="../assets/img/buy-dc-power-visa.svg" alt="">
         <h4>dc power visa</h4>
       </div>
@@ -44,18 +44,17 @@ export default {
       padding: 20px;
       display: flex;
       justify-content: space-between;
-        .box {
+        .image-box {
           display: flex;
           align-items: center;
             img {
-              width: 50px;
-              margin-right: 5px;
+              width: 40px;
+              margin-right: 10px;
             }
               h4 {
                 font-size: 15px;
                 text-transform: uppercase;
-              }
-                
+              }         
         }
     }
   }
