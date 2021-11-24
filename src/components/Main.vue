@@ -1,6 +1,8 @@
 <template>
   <main>
-    MAIN 
+    <div class="container">
+      <h2> --> Content goes here </h2>
+    </div>
   </main>
 </template>
 
@@ -12,5 +14,18 @@ export default {
 
 <style lang="scss">
   @import "../assets/style/vars.scss";
+
+  main{
+    background-color: #1c1c1c;
+    .container{
+      height: 150px;
+      display: flex;
+      align-items: center;
+      color: white;
+      h2 {
+        font-weight: 600;
+      }
+    }
+  }
 
 </style>
