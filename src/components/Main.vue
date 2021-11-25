@@ -1,7 +1,9 @@
 <template>
   <main>
+    <div class="jumbotron">
+
+    </div>
     <div class="container">
-      <h2> --> Content goes here </h2>
     </div>
   </main>
 </template>
@@ -15,10 +17,14 @@ export default {
 <style lang="scss">
   @import "../assets/style/vars.scss";
 
+
   main{
-    background-color: #1c1c1c;
+    .jumbotron {
+      background-image: url('../assets/img/jumbotron.jpg');
+      height: 400px;
+    }
     .container{
-      height: 150px;
+      background-color: #1c1c1c;
       display: flex;
       align-items: center;
       color: white;
