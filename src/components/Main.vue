@@ -8,7 +8,9 @@
         :key="index" 
         :product="product"
         />
-      <button>load more</button>
+      <div class="btn-series">
+        <button>load more</button>
+      </div>
     </div>
   </main>
 </template>
@@ -59,11 +61,12 @@ export default {
       font-size: 30px;
       font-weight: bold;
     }
-    button {
+    .btn-series {
       display: flex;
       justify-content: center;
-      align-content: center;
-      align-items: center;
+      width: 100%;
+    }
+    button {
       background-color: #0282f9;
       color: white;
       padding: 15px 70px;
@@ -71,6 +74,7 @@ export default {
       text-transform: uppercase;
       margin: 30px 0;
       border: none;
+      font-weight: bold;
     }
   }
 
